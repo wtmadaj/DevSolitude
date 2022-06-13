@@ -91,6 +91,6 @@ authors:
     picture: /assets/img/faces/team-1.jpg
 
 advanced_settings:
-  analytics_code: G-JZVV5QQ43R
-  header_js: /assets/js/gtag.js
+  analytics_code:
+  header_js:
   footer_js: 
