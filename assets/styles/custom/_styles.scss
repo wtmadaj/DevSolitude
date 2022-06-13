@@ -1,3 +1,8 @@
+//Horizontal scrollbar showing for some reason?
+body { overflow-x: hidden; }
+
 //Don't need author to show in blogs, for now
 .blogs-3 .card.card-blog .author { display: none; }
+
+//Larger logo area
 .navbar-brand img { height: 45px; }
