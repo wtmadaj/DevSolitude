@@ -66,22 +66,22 @@ footer_settings:
   footer_tagline: Learn. Create. Relax.
 
 contact_settings:
-  form_action: 'https://formspree.io/hello@jekyllthemes.io'
+  form_action: 'https://formspree.io/f/xeqndpyk'
   confirmation_url: '/thanks'
   email_subject: 'Contact form submission'
   send_button_text: 'Send Message'
 
 social_settings:
-  facebook_url: 'https://www.facebook.com/jekyllthemes/'
-  twitter_url: 'https://twitter.com/jekyllthemesio'
-#  instagram_url: 'https://twitter.com/jekyllthemesio'
+  facebook_url: 'https://www.facebook.com/'
+  twitter_url: 'https://twitter.com/'
+#  instagram_url: 'https://twitter.com/'
   youtube_url: ''
   vimeo_url: ''
   pinterest_url: ''
   tumblr_url: ''
   dribbble_url: ''
   behance_url: ''
-  github_url: 'https://twitter.com/jekyllthemesio'
+  github_url: 'https://github.com/'
   reddit_url: ''
   linkedin_url: ''
 

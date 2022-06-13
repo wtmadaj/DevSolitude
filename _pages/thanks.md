@@ -1,6 +1,6 @@
 ---
 title: Thank You
-subtitle: Your form submission was sent successfully
-description: Use the Argon Jekyll theme to build a landing page, blog or complete website.
+subtitle: Your message was sent successfully
+description: Thank you page for submitting a message on the Contact page.
 ---
 
