@@ -86,17 +86,11 @@ social_settings:
   linkedin_url: ''
 
 authors:
-  tom:
-    name: Tom
+  wes:
+    name: Wes
     picture: /assets/img/faces/team-1.jpg
-  jane:
-    name: Jane
-    picture: /assets/img/faces/team-4.jpg
-  michael:
-    name: Michael
-    picture: /assets/img/faces/michael.jpg
 
 advanced_settings:
-  analytics_code: 
-  header_js: 
+  analytics_code:
+  header_js:
   footer_js: 
