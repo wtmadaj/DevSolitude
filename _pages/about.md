@@ -1,7 +1,7 @@
 ---
-title: About Us
-subtitle: This is the perfect theme for developers, designers and other creatives.
-description: Use the Argon Jekyll theme to build a landing page, blog or complete website.
+title: About Dev Solitude
+subtitle: My place to design, develop, and share what I love doing. 
+description: Information about the Dev Solitude site and the owner.
 featured_image: /assets/img/sections/broofoac.jpg
 ---
 
