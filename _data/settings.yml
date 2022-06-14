@@ -18,7 +18,7 @@ home_settings:
 
 blog_settings:
   # Choose a format for your blog listings:
-    # basic – a simple list of posts
+    # basic – a simple list of posts. List === basic
     # narrow – a masonary grid of posts
     # grid – a full-width square grid of posts
   theme: basic
@@ -44,19 +44,7 @@ menu_settings:
     - title: Pricing
       url: /pricing        
     - title: 'Blog'
-      submenu_items:
-      - title: Blog
-        url: /blog
-        icon: ni-books text-primary
-      - title: Narrow Grid Example
-        url: /blog-narrow-example
-        icon: ni-align-center text-success
-      - title: Wide Grid Example
-        url: /blog-grid-example
-        icon: ni-image text-info
-      - title: List Example
-        url: /blog-list-example
-        icon: ni-bullet-list-67 text-default    
+      url: /blog
     - title: 'About'
       url: '/about'
     - title: 'Contact'
