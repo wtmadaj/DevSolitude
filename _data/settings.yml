@@ -3,8 +3,8 @@ basic_settings:
   favicon_image: /assets/img/favicon.png
 
 header_settings:
-  logo_image: /assets/img/brand/DevSolitude-edited.gif
-  mobile_logo_image: /assets/img/brand/DevSolitude-black.gif
+  logo_image: /assets/img/brand/white.png
+  mobile_logo_image: /assets/img/brand/blue.png
   # Choose a color for your header [blue, dark, light].
   theme: dark
   # If the page has a featured image, it turns transparent if allow_transparent is set to "yes".
@@ -49,7 +49,7 @@ menu_settings:
       url: '/contact'
 
 footer_settings:
-  footer_tagline: Learn. Create. Relax.
+  footer_tagline: Learn. Create. Build.
 
 contact_settings:
   form_action: 'https://formspree.io/f/xeqndpyk'
