@@ -2,7 +2,7 @@
 title: About
 subtitle: My place to experiment with what I love. And where you can learn from it all. 
 description: Information about the Dev Solitude site and the owner.
-featured_image: /assets/img/sections/broofoac.jpg
+featured_image: /assets/img/brand/Contact.svg
 ---
 
 ```components/teams/team-carousel-1.html ```
