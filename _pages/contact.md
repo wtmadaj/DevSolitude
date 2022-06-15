@@ -1,8 +1,8 @@
 ---
 title: Contact
-subtitle: This theme comes with a built-in contact form that's free and easy to set up.
+subtitle: Got a question or comment? Get in touch.
 type: contact
-description: This theme comes with a built-in contact form that's free and easy to set up.
+description: Contact the owner of Dev Solitude
 ---
 
 {% include components/headers/contact-page-header.html %}
