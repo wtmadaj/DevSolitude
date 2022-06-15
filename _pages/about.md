@@ -1,6 +1,6 @@
 ---
-title: About Dev Solitude
-subtitle: My place to design, develop, and share what I love doing. 
+title: About
+subtitle: My place to experiment with what I love. And where you can learn from it all. 
 description: Information about the Dev Solitude site and the owner.
 featured_image: /assets/img/sections/broofoac.jpg
 ---
