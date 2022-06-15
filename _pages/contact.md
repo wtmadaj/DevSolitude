@@ -1,6 +1,6 @@
 ---
 title: Contact
-subtitle: Got a question or comment? Get in touch.
+subtitle: Have questions or comments? Get in touch.
 type: contact
 description: Contact the owner of Dev Solitude
 ---
