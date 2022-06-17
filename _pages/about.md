@@ -5,21 +5,19 @@ description: Information about the Dev Solitude site and the owner.
 featured_image: /assets/img/brand/Contact.svg
 ---
 
-```components/teams/team-carousel-1.html ```
 {% include components/teams/team-carousel-1.html %}
 
----
-```components/teams/team-carousel-2.html ```
-{% include components/teams/team-carousel-2.html %}
+
+{% include components/features/feature-1.html %}
 
 ---
-```components/teams/team-carousel-3.html ```
-{% include components/teams/team-carousel-3.html %}
+### Acknowledgements
+Site powered by Jekyll with Argon
+
+<br>
 
 ---
-```components/teams/team-carousel-4.html ```
-{% include components/teams/team-carousel-4.html %}
+#### Photo Credits
+Skyscraper photo by [John Thomas on Unsplash](https://unsplash.com/photos/xdRRZq6miGw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
----
-```components/teams/team-carousel-5.html ```
-{% include components/teams/team-carousel-5.html %}
+House photo by [Birgit Loit on Unsplash](https://unsplash.com/photos/CnXVHyO1GGA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
