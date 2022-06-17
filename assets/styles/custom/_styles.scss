@@ -1,8 +1,22 @@
 //Horizontal scrollbar showing for some reason?
 body { overflow-x: hidden; }
 
-//Don't need author to show in blogs, for now
+//Don't need author to show in blogs -- for now
 .blogs-3 .card.card-blog .author { display: none; }
 
 //Larger logo area
 .navbar-brand img { height: 45px; }
+
+//Make paragraph text larger. Seems to help gain reading momentum faster
+p {
+  font-size: 18px;
+}
+
+//Make the main text area in blogs wider.
+//TODO: below will affect all of the site. need to narrow focus to blogs only.
+//@media (min-width: 768px) {
+//  .col-md-8 {
+//    flex: 0 0 66.6666666667%;
+//    max-width: 80%;
+//  }
+//}
