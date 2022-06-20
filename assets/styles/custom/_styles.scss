@@ -7,20 +7,36 @@ body { overflow-x: hidden; }
 //Larger logo area
 .navbar-brand img { height: 45px; }
 
+//Shrinking page header image area. Too large for my taste for blog posts
+.page-header {
+  min-height: 400px;
+  max-height: 680px;
+}
+
 //Make paragraph text larger in blogs. Seems to help gain reading momentum faster
 .blog-post p {
   font-size: 18px;
 }
 
+//About page uses a template that needs this for mobile, otherwise the cards have no bottom margin
 .col-md-4 {
   margin-bottom: 8px;
 }
 
 //Make the main text area in blogs wider.
 //TODO: below will affect all of the site. need to narrow focus to blogs only.
-//@media (min-width: 768px) {
-//  .col-md-8 {
-//    flex: 0 0 66.6666666667%;
-//    max-width: 80%;
-//  }
-//}
+@media (min-width: 768px) {
+  .col-md-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 80%;
+  }
+}
+
+//Make code blocks as wide as the view width, and add some extra left padding
+.highlight {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+.highlight pre {
+  padding-left: 2rem;
+}
