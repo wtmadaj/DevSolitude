@@ -7,9 +7,13 @@ body { overflow-x: hidden; }
 //Larger logo area
 .navbar-brand img { height: 45px; }
 
-//Make paragraph text larger. Seems to help gain reading momentum faster
-p {
+//Make paragraph text larger in blogs. Seems to help gain reading momentum faster
+.blog-post p {
   font-size: 18px;
+}
+
+.col-md-4 {
+  margin-bottom: 8px;
 }
 
 //Make the main text area in blogs wider.
