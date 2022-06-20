@@ -7,11 +7,15 @@ body { overflow-x: hidden; }
 //Larger logo area
 .navbar-brand img { height: 45px; }
 
-//Shrinking page header image area. Too large for my taste for blog posts
-.page-header {
-  min-height: 400px;
-  max-height: 680px;
+.page-header .header-filter:before {
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
+
+//Shrinking page header image area. Too large for my taste for blog posts
+//.page-header {
+//  min-height: 400px;
+//  max-height: 680px;
+//}
 
 //Make paragraph text larger in blogs. Seems to help gain reading momentum faster
 .blog-post p {
@@ -24,7 +28,7 @@ body { overflow-x: hidden; }
 }
 
 //Make the main text area in blogs wider.
-//TODO: below will affect all of the site. need to narrow focus to blogs only.
+//TODO: below will affect other areas, need to narrow focus to blogs only. Noticeable in feature-2
 @media (min-width: 768px) {
   .col-md-8 {
     flex: 0 0 66.6666666667%;
