@@ -17,7 +17,7 @@ body { overflow-x: hidden; }
 //  max-height: 680px;
 //}
 
-//Make paragraph text larger in blogs. Seems to help gain reading momentum faster
+//Make paragraph text larger in blogs to gain reading momentum faster
 .blog-post p {
   font-size: 18px;
 }
@@ -31,7 +31,7 @@ body { overflow-x: hidden; }
 //TODO: below will affect other areas, need to narrow focus to blogs only. Noticeable in feature-2
 @media (min-width: 768px) {
   .col-md-8 {
-    flex: 0 0 66.6666666667%;
+    flex: 0 0 80%;
     max-width: 80%;
   }
 }
