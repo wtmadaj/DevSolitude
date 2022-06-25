@@ -1,7 +1,7 @@
 ---
 title: How to Make a Logo with a Transparent Background For Free
 date: 2022-06-20 00:00:00
-description: Learn how I created the site's logo using free tools. You'll also learn how to make the background transparent.
+description: Learn how to create a logo using free tools. You'll also learn how to make the background transparent.
 featured_image: /assets/img/brand/Contact.svg
 author: Wes
 ---
@@ -132,12 +132,116 @@ Imagine you're trying to put this logo on a shirt, and that shirt is any color *
 
 Once complete, fire it up so we can import the light bulb logo for editing.
 
-##### Importing our logo into GIMP
+##### Importing our logo into GIMP (and a quick tour)
+To open the logo, go to **File** &rarr; **Open** &rarr; and browse to where you saved the logo. Select it, then click **Open**.
 
+<img src="/assets/img/blog-images/gimp-import-image.png">
+
+Now we should have the image opened in GIMP. Before we look at the overall workspace, let's make sure some helpful windows are docked in GIMP.
+
+Go to **Windows** &rarr; **Dockable Dialogs** and you'll need to make sure you select the tools listed below. Note - you may not be able to select them all at once.
+* Tool Options
+* Layers
+* Selection Editor
+
+<img src="/assets/img/blog-images/gimp-tool-window-selection.png">
+
+Once docked, they may show up in the left- or right-hand side of your GIMP tool. Here's a brief look at them:
+
+<div class="row">
+<div class="col-6 col-md-4">
+<img class="card-img-top" src="/assets/img/blog-images/gimp-tool-options-tool.png" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">Tool Options</h4>
+    <p class="card-text">Configure the tool being used. Example: changing the size of the paint stroke. Think paint brush sizes.</p>
+  </div>
+</div>
+<div class="col-6 col-md-4">
+<img class="card-img-top" src="/assets/img/blog-images/gimp-layers-tool.png" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">Layers</h4>
+    <p class="card-text">Some images have layers of content you can edit. Think lasagna, but you can easily change the layers.</p>
+  </div>
+</div>
+<div class="col-6 col-md-4">
+<img class="card-img-top" src="/assets/img/blog-images/gimp-selection-editor-tool.png" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">Selection Editor</h4>
+    <p class="card-text">Select certain parts of the image, and verify the selection with this tool.</p>
+  </div>
+</div>
+</div>
+
+Below is what my full GIMP window looks like. I have some other tools docked, and they stack into tabs. But the tool windows I have open
+are the ones we've just docked together.
+
+<img src="/assets/img/blog-images/gimp-window.png">
+
+I've called out the ***upper left part of the window***. This area houses the main GIMP tools. Want to paint a blue line? You'll find the paintbrush tool here.
+Want to erase something? The Eraser tool is here too. This is where we'll find and select the tools to edit the image.
 
 
 ##### Editing the logo in GIMP to create a transparent background
+To remove the white background, we're going to need to perform a few steps in order:
+1. Select the background color with the Select by Color Tool
+2. Verify our selection with the Selection Editor window
+3. Erase the background color with the Eraser Tool
 
+It's a *little* more complex than that, but not much.
+
+###### Select the background and verify the selection
+In the upper left part of GIMP (the area I called out in the last image), find and select the **Select by Color Tool**. See the image below for what it looks like - you can also hover your
+mouse over the tools to see their names.
+
+image of selec by color tool
+
+Once it is selected, verify that the Mode for the tool is "**Replace the current selection**":
+
+image of tool mode
+
+Now, click in the background of the image (the white area for me). It may not look like anything happened. We verify the selection by checking the **Selection Editor** window, which should look like this:
+
+image of selection editor window to verify
+
+###### Removing the background via the Eraser Tool
+Now we can remove that pesky background. Select the **Eraser Tool** in the upper left part of the GIMP window:
+
+image of selecting eraser tool
+
+Now verify the tool's options. Below you can see that I have my Eraser's **Size** set to pretty large. This allows me to erase a lot with fewer strokes. And since we've
+selected the areas we want to target for erasing, we don't have to worry about erasing any colors ***other than white***. I also have the **Opacity** set to 100 (max).
+
+<div class="alert alert-danger" role="alert">
+    <span class="alert-inner--icon"><i class="ni ni-notification-70"></i></span>
+    <span><strong>Warning</strong></span>
+    <br><span>If your logo image also has white in it, you'll erase that too if the Eraser stroke passes over that area. You can make the Eraser's size smaller and then make more careful strokes.</span>
+</div>
+<br>
+
+image of eraser tool settings
+
+Now that the Eraser tool is selected and ready, click and hold as you drag the mouse over the image until the background is removed. You should see a checkered background where the white was:
+
+image of erasing bg 
+image of bg gone
+
+That's it. We've just removed the white background from the image. All that's left is to export (save) the newly saved image!
+
+##### Saving the final image
+Almost done. To save our image, go to **File** &rarr; **Export As...** and you'll be brought to a window similar to when we imported the image. 
+
+image of export
+
+We can leave it as-is, and it will overwrite the original image as a PNG. Or we can name it something else - your choice. Since I'm using the same filename, it will
+ask if I want to overwrite, and I'll confirm. Now we can use this new image wherever we want without worrying about the white box background.
+
+---
+### Summary
+You don't need to pay for premium versions of tools to accomplish professional results. There were a lot of step-by-step instructions, but essentially we:
+* Found an image/logo in Canva and exported it
+* Used GIMP to select the background and remove it
+
+And we barely scratched the surface of what these tools can do.
 
 [^1]: [Canva's About page](https://www.canva.com/about/){:target="_blank"}
 [^2]: [GIMP homepage](https://www.gimp.org){:target="_blank"}
