@@ -1,6 +1,6 @@
 ---
 title: How to Make a Logo with a Transparent Background For Free
-date: 2022-06-20 00:00:00
+date: 2022-06-26 00:00:00
 description: Learn how to create a logo using free tools. You'll also learn how to make the background transparent.
 featured_image: /assets/img/brand/Contact.svg
 author: Wes
