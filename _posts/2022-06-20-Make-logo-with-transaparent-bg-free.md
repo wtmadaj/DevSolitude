@@ -5,12 +5,12 @@ description: Learn how to create a logo using free tools. You'll also learn how 
 featured_image: /assets/img/brand/Contact.svg
 author: Wes
 ---
-<span class="badge badge-success">Beginner</span>
+<span class="badge badge-success">Easy</span>
 
-Today we're going to create a logo and make the background transparent - and we're going to do it all with **free** tools. 
+Today we're going to create a logo and make the background transparent - and we're going to do it with **free** tools. 
 
-Not free *trials* of paid services or programs, these are totally free tools. One of them has a paid option - but we don't need it. We can accomplish this
-for free thanks to help from other tools.
+Not free *trials* of paid services or programs, these are totally free tools. One of them has a paid option - but we don't need it. We can accomplish everything
+for free thanks to help from another tool.
 
 ---
 ### Tools We'll Be Using
@@ -139,7 +139,7 @@ To open the logo, go to **File** &rarr; **Open** &rarr; and browse to where you 
 
 Now we should have the image opened in GIMP. Before we look at the overall workspace, let's make sure some helpful windows are docked in GIMP.
 
-Go to **Windows** &rarr; **Dockable Dialogs** and you'll need to make sure you select the tools listed below. Note - you may not be able to select them all at once.
+Go to **Windows** &rarr; **Dockable Dialogs** and you'll need to make sure you select the tools listed below. Note - you may have to select them one-by-one.
 * Tool Options
 * Layers
 * Selection Editor
@@ -191,49 +191,67 @@ It's a *little* more complex than that, but not much.
 
 ###### Select the background and verify the selection
 In the upper left part of GIMP (the area I called out in the last image), find and select the **Select by Color Tool**. See the image below for what it looks like - you can also hover your
-mouse over the tools to see their names.
+mouse over the tools to see their names. 
 
-image of selec by color tool
+<img src="/assets/img/blog-images/gimp-select-by-color-tool-and-mode.png">
 
-Once it is selected, verify that the Mode for the tool is "**Replace the current selection**":
-
-image of tool mode
+Once it is selected, verify that the Mode for the tool is "**Replace the current selection**" as shown by the other red arrow in the image above.
 
 Now, click in the background of the image (the white area for me). It may not look like anything happened. We verify the selection by checking the **Selection Editor** window, which should look like this:
 
-image of selection editor window to verify
+<img src="/assets/img/blog-images/gimp-selection-editor-verify.png">
+
+The **Selection Editor** window will show two colors - black and white. The white parts of the image are the ***colors currently selected***. The black parts are the colors not selected. Click
+in different colors with the **Select by Color Tool** to see how the selection changes to get a better understanding.
+
 
 ###### Removing the background via the Eraser Tool
 Now we can remove that pesky background. Select the **Eraser Tool** in the upper left part of the GIMP window:
 
-image of selecting eraser tool
+<img src="/assets/img/blog-images/gimp-eraser-tool.png">
 
 Now verify the tool's options. Below you can see that I have my Eraser's **Size** set to pretty large. This allows me to erase a lot with fewer strokes. And since we've
-selected the areas we want to target for erasing, we don't have to worry about erasing any colors ***other than white***. I also have the **Opacity** set to 100 (max).
+selected the areas we want to target for erasing, we don't have to worry about erasing any colors ***other than white***. I also have the **Opacity** and **Hardness** set to 100 (max).
+
+<img src="/assets/img/blog-images/gimp-eraser-tool-settings.png">
+
+See the arrow pointing to the dotted circle in the image above? This is the size of the stroke based on my settings. Nearly the whole image fits inside it!
 
 <div class="alert alert-danger" role="alert">
     <span class="alert-inner--icon"><i class="ni ni-notification-70"></i></span>
     <span><strong>Warning</strong></span>
-    <br><span>If your logo image also has white in it, you'll erase that too if the Eraser stroke passes over that area. You can make the Eraser's size smaller and then make more careful strokes.</span>
+    <br><span>If your logo image also has white in it, you'll erase that too if the Eraser stroke passes over that area. You can make the Eraser's size smaller to make more careful, targeted strokes.</span>
 </div>
 <br>
 
-image of eraser tool settings
-
 Now that the Eraser tool is selected and ready, click and hold as you drag the mouse over the image until the background is removed. You should see a checkered background where the white was:
 
-image of erasing bg 
-image of bg gone
+<div class="row">
+<div class="col-md-6"><img src="/assets/img/blog-images/gimp-erasing-bg-1.png"></div>
+<div class="col-md-6"><img src="/assets/img/blog-images/gimp-erasing-bg-2.png"></div>
+</div>
+
 
 That's it. We've just removed the white background from the image. All that's left is to export (save) the newly saved image!
 
 ##### Saving the final image
-Almost done. To save our image, go to **File** &rarr; **Export As...** and you'll be brought to a window similar to when we imported the image. 
+Almost done. To save our image, go to **File** &rarr; **Export As...** and you'll be brought to a window similar to when we imported the image.
 
-image of export
+We can leave it as-is and it will overwrite the original image as a PNG, Or we can name it something else - your choice. I'll 
+rename mine to show a before and after picture. When you click **Export** another window will pop up with some options - here are mine:
 
-We can leave it as-is, and it will overwrite the original image as a PNG. Or we can name it something else - your choice. Since I'm using the same filename, it will
-ask if I want to overwrite, and I'll confirm. Now we can use this new image wherever we want without worrying about the white box background.
+<img src="/assets/img/blog-images/gimp-export-image.png">
+<br><br>
+
+Click **Export** again and to save the new image. Now we can use this new image wherever we want without worrying about the white box background. Here's the before and after:
+
+<br>
+<div style="background-color: dimgray; text-align: center;">
+    <br>
+    <img src="/assets/img/blog-images/light-bulb-logo.png" style="width:100px;">
+    <img src="/assets/img/blog-images/light-bulb-logo-no-bg.png" style="width:100px;">
+    <br><br>
+</div>
 
 ---
 ### Summary
