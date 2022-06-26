@@ -231,8 +231,8 @@ Now that the Eraser tool is selected and ready, click and hold as you drag the m
 <div class="col-md-6"><img src="/assets/img/blog-images/gimp-erasing-bg-2.png"></div>
 </div>
 
-
-That's it. We've just removed the white background from the image. All that's left is to export (save) the newly saved image!
+<br>
+That's it. We've just removed the white background from the image. All that's left is to export (save) the new image!
 
 ##### Saving the final image
 Almost done. To save our image, go to **File** &rarr; **Export As...** and you'll be brought to a window similar to when we imported the image.
