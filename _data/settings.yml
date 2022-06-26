@@ -43,15 +43,15 @@ menu_settings:
 #      url: '/features'
     - title: 'Learn'
       submenu_items:
-        - title: HTML
-          url: '/html'
-          icon: ni-html5 text-primary
-        - title: CSS
-          url: '/css'
-          icon: fa fa-css3 text-success
-        - title: Javascript
-          url: '/javascript'
-          icon: fa fa-code text-warning
+      - title: HTML
+        url: '/html'
+        icon: ni-html5 text-primary
+      - title: CSS
+        url: '/css'
+        icon: fa fa-css3 text-success
+      - title: Javascript
+        url: '/javascript'
+        icon: fa fa-code text-warning
     - title: 'Blog'
       url: /blog
     - title: 'About'
