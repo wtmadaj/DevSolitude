@@ -243,7 +243,7 @@ rename mine to show a before and after picture. When you click **Export** anothe
 <img src="/assets/img/blog-images/gimp-export-image.png">
 <br><br>
 
-Click **Export** again and to save the new image. Now we can use this new image wherever we want without worrying about the white box background. Here's the before and after:
+Click **Export** again to save the new image. Now we can use this new image wherever we want without worrying about the white box background. Here's the before and after:
 
 <br>
 <div style="background-color: dimgray; text-align: center;">
