@@ -2,7 +2,7 @@
 title: Pricing
 subtitle: Lots of different ways to show your product pricing.
 description: Use the Argon Jekyll theme to build a landing page, blog or complete website.
-featured_image: /assets/img/pages/nathan-dumlao.jpg
+featured_image: 
 ---
 
 --- 
