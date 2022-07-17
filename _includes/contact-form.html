@@ -14,7 +14,7 @@
         <div class="col-lg-8 col-md-12 ml-auto mr-auto">
           <div class="card card-contact card-raised">
 
-            <form method="post" action="{{ site.data.settings.contact_settings.form_action }}" id="contact-form">
+            <form action="{{ site.data.settings.contact_settings.form_action }}" method="POST" id="contact-form">
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-6">
@@ -25,7 +25,7 @@
                           <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                         </div>
                         <input class="form-control" name="First Name" placeholder="First Name..."
-                          aria-label="First Name..." type="text">
+                          aria-label="First Name..." type="text" required>
                       </div>
                     </div>
                   </div>
@@ -37,7 +37,7 @@
                           <span class="input-group-text"><i class="ni ni-collection"></i></span>
                         </div>
                         <input type="text" class="form-control" name="Last Name" placeholder="Last Name..."
-                          aria-label="Last Name...">
+                          aria-label="Last Name..." required>
                       </div>
                     </div>
                   </div>
@@ -48,12 +48,12 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Email Here..." name="email">
+                    <input type="text" class="form-control" placeholder="Email Here..." name="email" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Your message</label>
-                  <textarea name="message" class="form-control" id="message" rows="6"></textarea>
+                  <textarea name="message" class="form-control" id="message" rows="6" required></textarea>
                 </div>
                 <div class="row">
                   <div class="col-md-6">

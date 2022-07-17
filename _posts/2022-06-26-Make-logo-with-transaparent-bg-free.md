@@ -58,7 +58,7 @@ then create a new logo template type by selecting "Logo":
 
 Select the "Elements" tab on the left-hand side of the app, then search for "light bulb" to find some images to choose from.
 
-<img src="/assets/img/blog-images/canva-find-light-bulb.png" style="max-width:400px;">
+<img src="/assets/img/blog-images/canva-find-light-bulb.png">
 
 Now, pick whatever logo you'd like. For this example, I chose the first one in the search results. When you click the image you want, it drops into the workspace area on the right.
 
@@ -72,8 +72,8 @@ Now, pick whatever logo you'd like. For this example, I chose the first one in t
 Let's make the image take up as much space as possible by dragging the resize bars to the top and bottom of the page.
 
 <div class="row">
-<div class="col-md-6"><img src="/assets/img/blog-images/canva-image-resize.png" style="max-width:400px;"></div>
-<div class="col-md-6"><img src="/assets/img/blog-images/canva-image-resized.png" style="max-width:400px;"></div>
+<div class="col-md-6"><img src="/assets/img/blog-images/canva-image-resize.png"></div>
+<div class="col-md-6"><img src="/assets/img/blog-images/canva-image-resized.png"></div>
 </div>
 
 At this point you could alter the image if you wanted. You can change the colors (for some elements), alter the background to anything but transparent, and even add more images or text to the page.
@@ -87,7 +87,7 @@ To get around this limitation, we have to get the image **out** of Canva. In the
 
 Select "**Download**" to see the next set of options:
 
-<img src="/assets/img/blog-images/canva-download-options.png" style="max-width:400px;">
+<img src="/assets/img/blog-images/canva-download-options.png">
 
 Since we're using the free version, we are ***only*** able to download at the 500 x 500px size. We also cannot make the background transparent (we already knew this). In the "**File type**" drop down,
 we can download as any file type **except** SVG (figures, right?). Select PNG as the file type, then click the "**Download**" button. You'll be able to choose the save location and give it a filename.
