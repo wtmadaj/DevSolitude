@@ -41,11 +41,11 @@ menu_settings:
         icon: ni-books text-primary
 #    - title: 'Features'
 #      url: '/features'
-    - title: 'Projects'
-      submenu_items:
-      - title: Flashcards
-        url: '/flashcards'
-        icon: ni-album-2 text-primary
+#    - title: 'Projects'
+#      submenu_items:
+#      - title: Flashcards
+#        url: '/flashcards'
+#        icon: ni-album-2 text-primary
     - title: 'Blog'
       url: /blog
     - title: 'About'
@@ -57,8 +57,10 @@ footer_settings:
   footer_tagline: Learn. Create. Build.
 
 contact_settings:
-  form_action: 'https://formspree.io/f/xeqndpyk'
-  confirmation_url: '/thanks'
+#  form_action: 'https://formspree.io/f/xeqndpyk'
+  form_action: 'https://formsubmit.co/info@devsolitude.com'
+#  confirmation_url: '/thanks'
+  confirmation_url: 'https://www.devsolitude.com/thanks'
   email_subject: 'Contact form submission'
   send_button_text: 'Send Message'
 

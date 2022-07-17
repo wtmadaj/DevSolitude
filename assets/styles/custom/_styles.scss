@@ -11,7 +11,7 @@ body { overflow-x: hidden; }
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
-//Shrinking page header image area. Too large for my taste for blog posts
+//Shrinking page header image area
 //.page-header {
 //  min-height: 400px;
 //  max-height: 680px;
@@ -40,11 +40,23 @@ body { overflow-x: hidden; }
   }
 }
 
-//Make code blocks as wide as the view width, and add some extra left padding
-.highlight {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+//Making some alerts bg slightly darker
+.alert-info {
+  color: #30bad4;
+  background-color: #30bad4;
+  border-color: #30bad4;
 }
-.highlight pre {
-  padding-left: 2rem;
+.alert-success {
+  color: #34cb8a;
+  background-color: #34cb8a;
+  border-color: #34cb8a;
 }
+
+//Make code blocks as wide as the viewport width, and add some extra left padding
+//.highlight {
+//  width: 100vw;
+//  margin-left: calc(50% - 50vw);
+//}
+//.highlight pre {
+//  padding-left: 2rem;
+//}
