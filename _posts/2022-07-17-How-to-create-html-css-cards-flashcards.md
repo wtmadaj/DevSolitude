@@ -1,6 +1,6 @@
 ---
 title: How to Create HTML/CSS Cards and Flashcards
-date: 2022-07-02 00:00:00
+date: 2022-07-17 00:00:00
 description: Learn how to create "cards" with HTML and CSS. Then learn how to make them flip over to reveal more content - like a flashcard or flip card.
 featured_image: /assets/img/pages/flashcard-header.jpg
 author: Wes
