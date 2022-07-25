@@ -41,17 +41,11 @@ menu_settings:
         icon: ni-books text-primary
 #    - title: 'Features'
 #      url: '/features'
-    - title: 'Learn'
-      submenu_items:
-      - title: HTML
-        url: '/html'
-        icon: ni-html5 text-primary
-      - title: CSS
-        url: '/css'
-        icon: fa fa-css3 text-success
-      - title: Javascript
-        url: '/javascript'
-        icon: fa fa-code text-warning
+#    - title: 'Projects'
+#      submenu_items:
+#      - title: Flashcards
+#        url: '/flashcards'
+#        icon: ni-album-2 text-primary
     - title: 'Blog'
       url: /blog
     - title: 'About'
@@ -63,8 +57,10 @@ footer_settings:
   footer_tagline: Learn. Create. Build.
 
 contact_settings:
-  form_action: 'https://formspree.io/f/xeqndpyk'
-  confirmation_url: '/thanks'
+#  form_action: 'https://formspree.io/f/xeqndpyk'
+  form_action: 'https://formsubmit.co/info@devsolitude.com'
+#  confirmation_url: '/thanks'
+  confirmation_url: 'https://www.devsolitude.com/thanks'
   email_subject: 'Contact form submission'
   send_button_text: 'Send Message'
 
@@ -85,7 +81,7 @@ social_settings:
 authors:
   wes:
     name: Wes
-    picture: /assets/img/faces/team-1.jpg
+    picture: /assets/img/brand/gear-blue.png
 
 advanced_settings:
   analytics_code:
