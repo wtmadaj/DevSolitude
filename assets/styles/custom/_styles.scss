@@ -1,8 +1,62 @@
 //Horizontal scrollbar showing for some reason?
 body { overflow-x: hidden; }
 
-//Don't need author to show in blogs, for now
+//Don't need author to show in blogs -- for now
 .blogs-3 .card.card-blog .author { display: none; }
 
 //Larger logo area
 .navbar-brand img { height: 45px; }
+
+.page-header .header-filter:before {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+//Shrinking page header image area
+//.page-header {
+//  min-height: 400px;
+//  max-height: 680px;
+//}
+
+//Make paragraph text larger in blogs to gain reading momentum faster
+.blog-post p {
+  font-size: 18px;
+}
+
+//About page uses a template that needs this for mobile, otherwise the cards have no bottom margin
+.col-md-4 {
+  margin-bottom: 8px;
+}
+
+//Make the main text area in blogs wider.
+//TODO: below will affect other areas, need to narrow focus to blogs only. Noticeable in feature-2
+@media (min-width: 768px) {
+  .col-md-8 {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  .blogs-3 .col-md-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+}
+
+//Making some alerts bg slightly darker
+.alert-info {
+  color: #30bad4;
+  background-color: #30bad4;
+  border-color: #30bad4;
+}
+.alert-success {
+  color: #34cb8a;
+  background-color: #34cb8a;
+  border-color: #34cb8a;
+}
+
+//Make code blocks as wide as the viewport width, and add some extra left padding
+//.highlight {
+//  width: 100vw;
+//  margin-left: calc(50% - 50vw);
+//}
+//.highlight pre {
+//  padding-left: 2rem;
+//}

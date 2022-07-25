@@ -3,8 +3,8 @@ basic_settings:
   favicon_image: /assets/img/favicon.png
 
 header_settings:
-  logo_image: /assets/img/brand/DevSolitude-edited.gif
-  mobile_logo_image: /assets/img/brand/DevSolitude-black.gif
+  logo_image: /assets/img/brand/white.png
+  mobile_logo_image: /assets/img/brand/blue.png
   # Choose a color for your header [blue, dark, light].
   theme: dark
   # If the page has a featured image, it turns transparent if allow_transparent is set to "yes".
@@ -39,8 +39,13 @@ menu_settings:
       - title: Blog
         url: /blog
         icon: ni-books text-primary
-    - title: 'Features'
-      url: '/features'
+#    - title: 'Features'
+#      url: '/features'
+#    - title: 'Projects'
+#      submenu_items:
+#      - title: Flashcards
+#        url: '/flashcards'
+#        icon: ni-album-2 text-primary
     - title: 'Blog'
       url: /blog
     - title: 'About'
@@ -49,11 +54,13 @@ menu_settings:
       url: '/contact'
 
 footer_settings:
-  footer_tagline: Learn. Create. Relax.
+  footer_tagline: Learn. Create. Build.
 
 contact_settings:
-  form_action: 'https://formspree.io/f/xeqndpyk'
-  confirmation_url: '/thanks'
+#  form_action: 'https://formspree.io/f/xeqndpyk'
+  form_action: 'https://formsubmit.co/info@devsolitude.com'
+#  confirmation_url: '/thanks'
+  confirmation_url: 'https://www.devsolitude.com/thanks'
   email_subject: 'Contact form submission'
   send_button_text: 'Send Message'
 
@@ -74,7 +81,7 @@ social_settings:
 authors:
   wes:
     name: Wes
-    picture: /assets/img/faces/team-1.jpg
+    picture: /assets/img/brand/gear-blue.png
 
 advanced_settings:
   analytics_code:
