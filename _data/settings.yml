@@ -32,13 +32,14 @@ blog_settings:
 menu_settings:
   menu_items:
     - title: 'Home'
-      submenu_items:
-      - title: Landing Page
-        url: /
-        icon: ni-spaceship text-success    
-      - title: Blog
-        url: /blog
-        icon: ni-books text-primary
+      url: /
+#      submenu_items:
+#      - title: Landing Page
+#        url: /
+#        icon: ni-spaceship text-success
+#      - title: Blog
+#        url: /blog
+#        icon: ni-books text-primary
 #    - title: 'Features'
 #      url: '/features'
 #    - title: 'Projects'
