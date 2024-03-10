@@ -47,6 +47,11 @@ menu_settings:
 #      - title: Flashcards
 #        url: '/flashcards'
 #        icon: ni-album-2 text-primary
+    - title: 'Tools'
+      submenu_items:
+        - title: 'Converter'
+          url: /converter
+          icon: ni-settings text-success
     - title: 'Blog'
       url: /blog
     - title: 'About'
@@ -55,7 +60,7 @@ menu_settings:
       url: '/contact'
 
 footer_settings:
-  footer_tagline: Learn. Create. Build.
+  footer_tagline: Go build something.
 
 contact_settings:
 #  form_action: 'https://formspree.io/f/xeqndpyk'
@@ -66,8 +71,8 @@ contact_settings:
   send_button_text: 'Send Message'
 
 social_settings:
-  facebook_url: 'https://www.facebook.com/'
-  twitter_url: 'https://twitter.com/'
+#  facebook_url: 'https://www.facebook.com/'
+#  twitter_url: 'https://twitter.com/'
 #  instagram_url: 'https://twitter.com/'
   youtube_url: ''
   vimeo_url: ''
@@ -75,7 +80,7 @@ social_settings:
   tumblr_url: ''
   dribbble_url: ''
   behance_url: ''
-  github_url: 'https://github.com/'
+#  github_url: 'https://github.com/'
   reddit_url: ''
   linkedin_url: ''
 

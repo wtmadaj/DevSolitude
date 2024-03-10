@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <style>
+      .conversion-wrapper { display: block; padding: 3px; margin-bottom: 10px; }
+      label {
+        display: inline-block;
+        padding-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conversion-wrapper">
+      <input type="text" id="msInput" oninput="convertTime('ms')" onclick="clearInputs('msInput')">
+      <label for="msInput">Milliseconds</label>
+    </div>
+
+    <div class="conversion-wrapper">
+      <input type="text" id="sInput" oninput="convertTime('s')" onclick="clearInputs('sInput')">
+      <label for="sInput">Seconds</label>
+    </div>
+
+    <div class="conversion-wrapper">
+      <input type="text" id="mInput" oninput="convertTime('m')" onclick="clearInputs('mInput')">
+      <label for="mInput">Minutes</label>
+    </div>
+
+    <div class="conversion-wrapper">
+      <input type="text" id="hInput" oninput="convertTime('h')" onclick="clearInputs('hInput')">
+      <label for="hInput">Hours</label>
+    </div>
+
+    <script>
+      function convertTime(unit) {
+        const msInput = parseFloat(document.getElementById('msInput').value) || 0;
+        const sInput = parseFloat(document.getElementById('sInput').value) || 0;
+        const mInput = parseFloat(document.getElementById('mInput').value) || 0;
+        const hInput = parseFloat(document.getElementById('hInput').value) || 0;
+
+        switch (unit) {
+          case 'ms':
+            document.getElementById('sInput').value = (msInput / 1000).toFixed(2);
+            document.getElementById('mInput').value = (msInput / (60 * 1000)).toFixed(2);
+            document.getElementById('hInput').value = (msInput / (60 * 60 * 1000)).toFixed(2);
+            break;
+          case 's':
+            document.getElementById('msInput').value = (sInput * 1000).toFixed(2);
+            document.getElementById('mInput').value = (sInput / 60).toFixed(2);
+            document.getElementById('hInput').value = (sInput / (60 * 60)).toFixed(2);
+            break;
+          case 'm':
+            document.getElementById('msInput').value = (mInput * 60 * 1000).toFixed(2);
+            document.getElementById('sInput').value = (mInput * 60).toFixed(2);
+            document.getElementById('hInput').value = (mInput / 60).toFixed(2);
+            break;
+          case 'h':
+            document.getElementById('msInput').value = (hInput * 60 * 60 * 1000).toFixed(2);
+            document.getElementById('sInput').value = (hInput * 60 * 60).toFixed(2);
+            document.getElementById('mInput').value = (hInput * 60).toFixed(2);
+            break;
+          default:
+            break;
+        }
+      }
+
+      function clearInputs(currentInputId) {
+        const inputIds = ['msInput', 'sInput', 'mInput', 'hInput'];
+        inputIds.forEach(id => {
+          if (id !== currentInputId) {
+            document.getElementById(id).value = '';
+          }
+        });
+      }
+    </script>
+
+  </body>
+</html>
