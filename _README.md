@@ -156,3 +156,12 @@ If you have any questions or feedback about the **Jekyll features** of the theme
 
 🤘
 
+## Issue Resolution
+
+For errors with bundle install where you get:
+```
+Bundler::PermissionError There was an error while trying to write to < path >
+``` 
+try 
+`export GEM_HOME="$HOME/.gem"` 
+then use the command again. This has occurred after computer restarts.

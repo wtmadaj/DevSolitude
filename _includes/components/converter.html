@@ -12,25 +12,36 @@
     </style>
   </head>
   <body>
-    <div class="conversion-wrapper">
-      <input type="text" id="msInput" oninput="convertTime('ms')" onclick="clearInputs('msInput')">
-      <label for="msInput">Milliseconds</label>
-    </div>
+    <div class="contactus-1 fullWidth">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12 ml-auto mr-auto">
+            <div class="card card-contact card-raised">
+              <div class="card-body">
 
-    <div class="conversion-wrapper">
-      <input type="text" id="sInput" oninput="convertTime('s')" onclick="clearInputs('sInput')">
-      <label for="sInput">Seconds</label>
-    </div>
+                <div class="conversion-wrapper row col-md-6 form-group">
+                  <label class="col-md-6" for="msInput">Milliseconds</label>
+                  <input class="form-control" type="text" id="msInput" oninput="convertTime('ms')" onclick="clearInputs('msInput')">
+                </div>
 
-    <div class="conversion-wrapper">
-      <input type="text" id="mInput" oninput="convertTime('m')" onclick="clearInputs('mInput')">
-      <label for="mInput">Minutes</label>
-    </div>
+                <div class="conversion-wrapper row col-md-6 form-group">
+                  <label class="col-md-6" for="sInput">Seconds</label>
+                  <input class="form-control" type="text" id="sInput" oninput="convertTime('s')" onclick="clearInputs('sInput')">
+                </div>
 
-    <div class="conversion-wrapper">
-      <input type="text" id="hInput" oninput="convertTime('h')" onclick="clearInputs('hInput')">
-      <label for="hInput">Hours</label>
-    </div>
+                <div class="conversion-wrapper row col-md-6 form-group">
+                  <label class="col-md-6" for="mInput">Minutes</label>
+                  <input class="form-control" type="text" id="mInput" oninput="convertTime('m')" onclick="clearInputs('mInput')">
+                </div>
+
+                <div class="conversion-wrapper row col-md-6 form-group">
+                  <label class="col-md-6" for="hInput">Hours</label>
+                  <input class="form-control" type="text" id="hInput" oninput="convertTime('h')" onclick="clearInputs('hInput')">
+
+                </div>
+              </div>
+            </div>
+          </div></div></div></div>
 
     <script>
       function convertTime(unit) {
