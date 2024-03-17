@@ -154,8 +154,6 @@ If you need help with using the **Argon design system itself**, you should visit
 
 If you have any questions or feedback about the **Jekyll features** of the theme, don't hesitate to reach out to hello@jekyllthemes.io for 1-to-1 support direct from the developers!
 
-🤘
-
 ## Issue Resolution
 
 For errors with bundle install where you get:
@@ -165,3 +163,7 @@ Bundler::PermissionError There was an error while trying to write to < path >
 try 
 `export GEM_HOME="$HOME/.gem"` 
 then use the command again. This has occurred after computer restarts.
+
+## Argon Icons
+https://demos.creative-tim.com/argon-design-system/docs/foundation/icons.html
+

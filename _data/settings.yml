@@ -48,6 +48,7 @@ menu_settings:
 #        url: '/flashcards'
 #        icon: ni-album-2 text-primary
     - title: 'Tools'
+      url: /tools
       submenu_items:
         - title: 'Converter'
           url: /converter
