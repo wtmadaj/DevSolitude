@@ -52,7 +52,7 @@ menu_settings:
       submenu_items:
         - title: 'Converter'
           url: /converter
-          icon: ni-settings text-success
+          icon: ni-ruler-pencil text-primary
     - title: 'Blog'
       url: /blog
     - title: 'About'

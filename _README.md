@@ -167,3 +167,5 @@ then use the command again. This has occurred after computer restarts.
 ## Argon Icons
 https://demos.creative-tim.com/argon-design-system/docs/foundation/icons.html
 
+## Branching Strategy
+feature > develop > main
