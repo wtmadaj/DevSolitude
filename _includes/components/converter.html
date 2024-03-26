@@ -21,22 +21,22 @@
 
                 <div class="conversion-wrapper row col-md-6 form-group">
                   <label class="col-md-6" for="msInput">Milliseconds</label>
-                  <input class="form-control" type="text" id="msInput" oninput="convertTime('ms')" onchange="clearInputs('msInput')">
+                  <input class="form-control" type="text" id="msInput" onkeyup="convertTime('ms')" >
                 </div>
 
                 <div class="conversion-wrapper row col-md-6 form-group">
                   <label class="col-md-6" for="sInput">Seconds</label>
-                  <input class="form-control" type="text" id="sInput" oninput="convertTime('s')" onchange="clearInputs('sInput')">
+                  <input class="form-control" type="text" id="sInput" onkeyup="convertTime('s')" >
                 </div>
 
                 <div class="conversion-wrapper row col-md-6 form-group">
                   <label class="col-md-6" for="mInput">Minutes</label>
-                  <input class="form-control" type="text" id="mInput" oninput="convertTime('m')" onchange="clearInputs('mInput')">
+                  <input class="form-control" type="text" id="mInput" onkeyup="convertTime('m')" >
                 </div>
 
                 <div class="conversion-wrapper row col-md-6 form-group">
                   <label class="col-md-6" for="hInput">Hours</label>
-                  <input class="form-control" type="text" id="hInput" oninput="convertTime('h')" onchange="clearInputs('hInput')">
+                  <input class="form-control" type="text" id="hInput" onkeyup="convertTime('h')" >
 
                 </div>
               </div>
@@ -52,23 +52,23 @@
 
         switch (unit) {
           case 'ms':
-            document.getElementById('sInput').value = (msInput / 1000).toFixed(2);
-            document.getElementById('mInput').value = (msInput / (60 * 1000)).toFixed(2);
+            document.getElementById('sInput').value = (msInput / 1000);
+            document.getElementById('mInput').value = (msInput / (60 * 1000));
             document.getElementById('hInput').value = (msInput / (60 * 60 * 1000)).toFixed(2);
             break;
           case 's':
-            document.getElementById('msInput').value = (sInput * 1000).toFixed(2);
-            document.getElementById('mInput').value = (sInput / 60).toFixed(2);
+            document.getElementById('msInput').value = (sInput * 1000);
+            document.getElementById('mInput').value = (sInput / 60);
             document.getElementById('hInput').value = (sInput / (60 * 60)).toFixed(2);
             break;
           case 'm':
-            document.getElementById('msInput').value = (mInput * 60 * 1000).toFixed(2);
-            document.getElementById('sInput').value = (mInput * 60).toFixed(2);
+            document.getElementById('msInput').value = (mInput * 60 * 1000);
+            document.getElementById('sInput').value = (mInput * 60);
             document.getElementById('hInput').value = (mInput / 60).toFixed(2);
             break;
           case 'h':
-            document.getElementById('msInput').value = (hInput * 60 * 60 * 1000).toFixed(2);
-            document.getElementById('sInput').value = (hInput * 60 * 60).toFixed(2);
+            document.getElementById('msInput').value = (hInput * 60 * 60 * 1000);
+            document.getElementById('sInput').value = (hInput * 60 * 60);
             document.getElementById('mInput').value = (hInput * 60).toFixed(2);
             break;
           default:
@@ -84,6 +84,19 @@
           }
         });
       }
+
+      function validateNumericInput(inputId) {
+        document.getElementById(inputId).addEventListener('input', function() {
+          let input = this.value;
+          if (!/^\d*\.?\d*$/.test(input)) {
+            this.value = input.replace(/\D/g, '');
+          }
+        });
+      }
+      validateNumericInput('msInput');
+      validateNumericInput('sInput');
+      validateNumericInput('mInput');
+      validateNumericInput('hInput');
     </script>
 
   </body>
