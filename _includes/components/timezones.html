@@ -1,0 +1,66 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Timezone Converter</title>
+	</head>
+	<body>
+		<div class="contactus-1 fullWidth">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-12 ml-auto mr-auto">
+						<div class="card card-contact card-raised">
+							<div class="card-body">
+
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+										</div>
+										<input class="flatpickr datetimepicker form-control" type="text" id="datetime" placeholder="Enter Date and Time">
+									</div>
+								</div>
+
+								<button type="button" class="btn btn-icon btn-3 btn-primary" onclick="convertTime()">
+									<span class="btn-inner--icon"><i class="ni ni-world-2"></i></span>
+									<span class="btn-inner--text">Convert</span>
+								</button>
+								<br><br>
+
+								<div id="output"></div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script>
+        function convertTime() {
+            var datetime = document.getElementById("datetime").value;
+            var date = new Date(datetime);
+
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "";
+
+            var timezones = ['America/New_York', 'America/Los_Angeles', 'Europe/London', 'Asia/Tokyo', 'Australia/Sydney'];
+            var output = "<h3>Converted Time:</h3>";
+
+            timezones.forEach(function(timezone) {
+                var convertedTime = date.toLocaleString('en-US', {timeZone: timezone});
+                var gmtOffset = date.getTimezoneOffset();
+                var offsetHours = Math.abs(Math.floor(gmtOffset / 60));
+                var offsetMinutes = Math.abs(gmtOffset % 60);
+                var offsetString = (gmtOffset >= 0 ? '-' : '+') + (offsetHours < 10 ? '0' : '') + offsetHours + ':' + (offsetMinutes < 10 ? '0' : '') + offsetMinutes;
+                output += "<p><b>" + timezone + "</b>" + ": " + convertedTime + " (GMT " + offsetString + ")</p>";
+            });
+
+            outputDiv.innerHTML = output;
+        }
+		</script>
+
+	</body>
+</html>
