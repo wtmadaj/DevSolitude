@@ -50,9 +50,15 @@ menu_settings:
     - title: 'Tools'
       url: /tools
       submenu_items:
+        - title: 'All Tools'
+          url: /tools
+          icon: ni-settings text-dark
         - title: 'Converter'
           url: /converter
           icon: ni-ruler-pencil text-primary
+        - title: 'Timezones'
+          url: /timezones
+          icon: ni-world-2 text-success
     - title: 'Blog'
       url: /blog
     - title: 'About'
