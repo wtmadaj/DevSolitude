@@ -45,7 +45,7 @@
             outputDiv.innerHTML = "";
 
             var output = "<h3>Converted Time:</h3>";
-            output += "<p>Your Local Time: " + formatDate(datetimeInput) + "</p>";
+            output += "<p><b>Your Local Time</b>: " + formatDate(datetimeInput) + "</p>";
 
             var timezones = [
                 { name: 'America/New_York', label: 'Eastern Time (ET)' },
@@ -57,7 +57,7 @@
 
             timezones.forEach(function(timezone) {
                 var convertedDate = convertToTimezone(datetimeInput, timezone.name);
-                output += "<p>" + timezone.label + ": " + formatDate(convertedDate) + "</p>";
+                output += "<p><b>" + timezone.label + "</b>" + ": " + formatDate(convertedDate) + "</p>";
             });
 
             outputDiv.innerHTML = output;
