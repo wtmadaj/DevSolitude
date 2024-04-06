@@ -17,7 +17,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
 										</div>
-										<input class="flatpickr datetimepicker form-control" type="text" id="datetime" placeholder="Enter Date and Time">
+										<input class="flatpickr datetimepicker form-control" type="datetime-local" id="datetime" placeholder="Enter Date and Time">
 									</div>
 								</div>
 
@@ -40,25 +40,41 @@
 
 		<script>
         function convertTime() {
-            var datetime = document.getElementById("datetime").value;
-            var date = new Date(datetime);
-
+            var datetimeInput = new Date(document.getElementById("datetime").value); // Get the local time entered by the user
             var outputDiv = document.getElementById("output");
             outputDiv.innerHTML = "";
 
-            var timezones = ['America/New_York', 'America/Los_Angeles', 'Europe/London', 'Asia/Tokyo', 'Australia/Sydney'];
             var output = "<h3>Converted Time:</h3>";
+            output += "<p>Your Local Time: " + formatDate(datetimeInput) + "</p>";
+
+            var timezones = [
+                { name: 'America/New_York', label: 'Eastern Time (ET)' },
+                { name: 'America/Los_Angeles', label: 'Pacific Time (PT)' },
+                { name: 'Europe/London', label: 'British Time (BT)' },
+                { name: 'Asia/Tokyo', label: 'Japan Time (JT)' },
+                { name: 'Australia/Sydney', label: 'Australian Eastern Time (AET)' }
+            ];
 
             timezones.forEach(function(timezone) {
-                var convertedTime = date.toLocaleString('en-US', {timeZone: timezone});
-                var gmtOffset = date.getTimezoneOffset();
-                var offsetHours = Math.abs(Math.floor(gmtOffset / 60));
-                var offsetMinutes = Math.abs(gmtOffset % 60);
-                var offsetString = (gmtOffset >= 0 ? '-' : '+') + (offsetHours < 10 ? '0' : '') + offsetHours + ':' + (offsetMinutes < 10 ? '0' : '') + offsetMinutes;
-                output += "<p><b>" + timezone + "</b>" + ": " + convertedTime + " (GMT " + offsetString + ")</p>";
+                var convertedDate = convertToTimezone(datetimeInput, timezone.name);
+                output += "<p>" + timezone.label + ": " + formatDate(convertedDate) + "</p>";
             });
 
             outputDiv.innerHTML = output;
+        }
+
+        function convertToTimezone(datetime, timezone) {
+            var options = { timeZone: timezone, hour12: false };
+            return new Date(datetime.toLocaleString('en-US', options));
+        }
+
+        function formatDate(date) {
+            var month = (date.getMonth() + 1).toString().padStart(2, '0');
+            var day = date.getDate().toString().padStart(2, '0');
+            var year = date.getFullYear();
+            var hours = date.getHours().toString().padStart(2, '0');
+            var minutes = date.getMinutes().toString().padStart(2, '0');
+            return month + '/' + day + '/' + year + ', ' + hours + ':' + minutes;
         }
 		</script>
 
