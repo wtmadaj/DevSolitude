@@ -1,7 +1,7 @@
 ---
 title: Timezone Translator
 subtitle: Enter a datetime and see the datetime in other timezones
-description: Enter a datetime and see the datetime in other timezones.
+description: Enter a datetime for your timezone and see the translation to other timezones with the UTC offset.
 featured_image: /assets/img/pages/clock.jpg
 ---
 
