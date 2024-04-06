@@ -5,78 +5,79 @@
 		<title>Timezone Converter</title>
 	</head>
 	<body>
-		<div class="contactus-1 fullWidth">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-12 ml-auto mr-auto">
-						<div class="card card-contact card-raised">
-							<div class="card-body">
+		<section class="mt-4" id="contact">
+			<div class="contactus-1 fullWidth">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-12 ml-auto mr-auto">
+							<div class="card card-contact card-raised">
+								<div class="card-body">
 
-								<div class="form-group">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+											</div>
+											<input class="flatpickr datetimepicker form-control" type="datetime-local" id="datetime" placeholder="Enter Date and Time">
 										</div>
-										<input class="flatpickr datetimepicker form-control" type="datetime-local" id="datetime" placeholder="Enter Date and Time">
 									</div>
+
+									<button type="button" class="btn btn-icon btn-3 btn-primary" onclick="convertTime()">
+										<span class="btn-inner--icon"><i class="ni ni-world-2"></i></span>
+										<span class="btn-inner--text">Convert</span>
+									</button>
+									<br><br>
+
+									<div id="output"></div>
+
 								</div>
-
-								<button type="button" class="btn btn-icon btn-3 btn-primary" onclick="convertTime()">
-									<span class="btn-inner--icon"><i class="ni ni-world-2"></i></span>
-									<span class="btn-inner--text">Convert</span>
-								</button>
-								<br><br>
-
-								<div id="output"></div>
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
 
 
-		<script>
-        function convertTime() {
-            var datetimeInput = new Date(document.getElementById("datetime").value); // Get the local time entered by the user
-            var outputDiv = document.getElementById("output");
-            outputDiv.innerHTML = "";
+			<script>
+          function convertTime() {
+              var datetimeInput = new Date(document.getElementById("datetime").value); // Get the local time entered by the user
+              var outputDiv = document.getElementById("output");
+              outputDiv.innerHTML = "";
 
-            var output = "<h3>Converted Time:</h3>";
-            output += "<p><b>Your Local Time</b>: " + formatDate(datetimeInput) + "</p>";
+              var output = "<h3>Converted Time:</h3>";
+              output += "<p><b>Your Local Time</b>: " + formatDate(datetimeInput) + "</p>";
 
-            var timezones = [
-                { name: 'America/New_York', label: 'Eastern Time (ET)' },
-                { name: 'America/Los_Angeles', label: 'Pacific Time (PT)' },
-                { name: 'Europe/London', label: 'British Time (BT)' },
-                { name: 'Asia/Tokyo', label: 'Japan Time (JT)' },
-                { name: 'Australia/Sydney', label: 'Australian Eastern Time (AET)' }
-            ];
+              var timezones = [
+                  { name: 'America/New_York', label: 'Eastern Time (ET)' },
+                  { name: 'America/Los_Angeles', label: 'Pacific Time (PT)' },
+                  { name: 'Europe/London', label: 'British Time (BT)' },
+                  { name: 'Asia/Tokyo', label: 'Japan Time (JT)' },
+                  { name: 'Australia/Sydney', label: 'Australian Eastern Time (AET)' }
+              ];
 
-            timezones.forEach(function(timezone) {
-                var convertedDate = convertToTimezone(datetimeInput, timezone.name);
-                output += "<p><b>" + timezone.label + "</b>" + ": " + formatDate(convertedDate) + "</p>";
-            });
+              timezones.forEach(function(timezone) {
+                  var convertedDate = convertToTimezone(datetimeInput, timezone.name);
+                  output += "<p><b>" + timezone.label + "</b>" + ": " + formatDate(convertedDate) + "</p>";
+              });
 
-            outputDiv.innerHTML = output;
-        }
+              outputDiv.innerHTML = output;
+          }
 
-        function convertToTimezone(datetime, timezone) {
-            var options = { timeZone: timezone, hour12: false };
-            return new Date(datetime.toLocaleString('en-US', options));
-        }
+          function convertToTimezone(datetime, timezone) {
+              var options = { timeZone: timezone, hour12: false };
+              return new Date(datetime.toLocaleString('en-US', options));
+          }
 
-        function formatDate(date) {
-            var month = (date.getMonth() + 1).toString().padStart(2, '0');
-            var day = date.getDate().toString().padStart(2, '0');
-            var year = date.getFullYear();
-            var hours = date.getHours().toString().padStart(2, '0');
-            var minutes = date.getMinutes().toString().padStart(2, '0');
-            return month + '/' + day + '/' + year + ', ' + hours + ':' + minutes;
-        }
-		</script>
-
+          function formatDate(date) {
+              var month = (date.getMonth() + 1).toString().padStart(2, '0');
+              var day = date.getDate().toString().padStart(2, '0');
+              var year = date.getFullYear();
+              var hours = date.getHours().toString().padStart(2, '0');
+              var minutes = date.getMinutes().toString().padStart(2, '0');
+              return month + '/' + day + '/' + year + ', ' + hours + ':' + minutes;
+          }
+			</script>
+		</section>
 	</body>
 </html>
