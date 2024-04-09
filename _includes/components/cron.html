@@ -28,7 +28,7 @@
 							<input type="number" id="dayOfWeek" min="0" max="7" step="1">
 
 							<br><br>
-							<button type="button" class="btn btn-icon btn-3 btn-primary" onclick="generateCronExpression()">
+							<button type="button" class="btn btn-icon btn-3 btn-primary" id="convertButton" onclick="generateCronExpression()">
 								<span class="btn-inner--icon"><i class="ni ni-time-alarm"></i></span>
 								<span class="btn-inner--text">Convert</span></button>
 						</div>
@@ -40,6 +40,33 @@
 							<br>
 							<div id="cronExpression">
 								<h4 class="card-title">Cron Expression:</h4>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+							<div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+								<div class="modal-content bg-gradient-danger">
+									<div class="modal-header">
+										<h6 class="modal-title" id="modal-title-notification">Oops! Invalid Input Value</h6>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">×</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="py-3 text-center">
+											<i class="ni ni-bell-55 ni-3x"></i>
+											<h4 class="heading mt-4">Please try again with valid input.</h4>
+											<p>Only positive numbers are allowed. Maximum values are: <br>
+												seconds: 59, minutes: 59, hours: 23, day of the month: 31, month: 12, and day of the week: 7</p>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-white" data-dismiss="modal">Ok, Got it</button>
+										<button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -85,6 +112,25 @@
                         document.getElementById('month').value = '';
                         document.getElementById('dayOfWeek').value = '';
                     }
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const inputs = document.querySelectorAll("input[type='number']");
+
+                        inputs.forEach(input => {
+                            input.addEventListener("input", function() {
+                                const min = parseInt(input.getAttribute("min"));
+                                const max = parseInt(input.getAttribute("max"));
+                                const value = parseInt(input.value);
+
+                                if (value < min || isNaN(value)) {
+                                    input.value = '';
+                                    $('#modal-notification').modal('show');
+                                } else if (value > max) {
+                                    input.value = '';
+                                    $('#modal-notification').modal('show');
+                                }
+                            });
+                        });
+                    });
 								</script>
 							</div>
 						</div>
