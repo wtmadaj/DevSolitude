@@ -1,0 +1,141 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cron Expression Converter</title>
+	</head>
+	<body>
+		<section class="mt-4" id="contact">
+			<div class="contactus-1 fullWidth">
+				<div class="container">
+
+					<div class="card card-nav-tabs">
+						<div class="card-body">
+							<h4 class="card-title">Enter the values for your cron expression</h4>
+							<br>
+
+							<label for="seconds">Seconds:</label>
+							<input type="number" id="seconds" min="0" max="59" step="1">
+							<label for="minutes">Minutes:</label>
+							<input type="number" id="minutes" min="0" max="59" step="1">
+							<label for="hours">Hours:</label>
+							<input type="number" id="hours" min="0" max="23" step="1">
+							<label for="dayOfMonth">Day of the Month:</label>
+							<input type="number" id="dayOfMonth" min="1" max="31" step="1">
+							<label for="month">Month:</label>
+							<input type="number" id="month" min="1" max="12" step="1">
+							<label for="dayOfWeek">Day of the Week:</label>
+							<input type="number" id="dayOfWeek" min="0" max="7" step="1">
+
+							<br><br>
+							<button type="button" class="btn btn-icon btn-3 btn-primary" id="convertButton" onclick="generateCronExpression()">
+								<span class="btn-inner--icon"><i class="ni ni-time-alarm"></i></span>
+								<span class="btn-inner--text">Convert</span></button>
+						</div>
+
+						<div class="card-footer text-muted">
+							<div id="inputValues">
+								<h4 class="card-title">Input Values:</h4>
+							</div>
+							<br>
+							<div id="cronExpression">
+								<h4 class="card-title">Cron Expression:</h4>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+							<div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+								<div class="modal-content bg-gradient-danger">
+									<div class="modal-header">
+										<h6 class="modal-title" id="modal-title-notification">Oops! Invalid Input Value</h6>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">×</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="py-3 text-center">
+											<i class="ni ni-bell-55 ni-3x"></i>
+											<h4 class="heading mt-4">Please try again with valid input.</h4>
+											<p>Only positive numbers are allowed. Maximum values are: <br>
+												seconds: 59, minutes: 59, hours: 23, day of the month: 31, month: 12, and day of the week: 7</p>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-white" data-dismiss="modal">Ok, Got it</button>
+										<button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+								<script>
+                    function generateCronExpression() {
+                        const seconds = document.getElementById('seconds').value.trim();
+                        const minutes = document.getElementById('minutes').value.trim();
+                        const hours = document.getElementById('hours').value.trim();
+                        const dayOfMonth = document.getElementById('dayOfMonth').value.trim();
+                        const month = document.getElementById('month').value.trim();
+                        const dayOfWeek = document.getElementById('dayOfWeek').value.trim();
+
+                        let cronExpression = '';
+
+                        cronExpression += seconds !== '' ? seconds + ' ' : '* ';
+                        cronExpression += minutes !== '' ? minutes + ' ' : '* ';
+                        cronExpression += hours !== '' ? hours + ' ' : '* ';
+												cronExpression += dayOfMonth !== '' ? dayOfMonth + ' ' : '* ';
+												cronExpression += month !== '' ? month + ' ' : '* ';
+												cronExpression += dayOfWeek !== '' ? dayOfWeek + ' ' : '* ';
+
+                        // Display user's input
+                        var inputDiv = document.getElementById('inputValues');
+                        inputDiv.innerHTML = "";
+                        var inputValues = "<h3>Input Values:</h3>"
+                        inputValues += `Seconds = ${seconds || '*'}, Minutes = ${minutes || '*'}, Hours = ${hours || '*'}, Day of the Month = ${dayOfMonth || '*'}, Month = ${month || '*'}, Day of the Week = ${dayOfWeek || '*'}`;
+                        inputDiv.innerHTML = inputValues;
+
+                        // Display cron expression
+                        var cronDiv = document.getElementById('cronExpression');
+                        cronDiv.innerHTML = "";
+                        var cronExpressionValues = "<h3>Cron Expression:</h3>"
+                        cronExpressionValues += cronExpression;
+                        document.getElementById('cronExpression').textContent = cronExpression;
+                        cronDiv.innerHTML = cronExpressionValues;
+
+                        // Clear input fields
+                        document.getElementById('seconds').value = '';
+                        document.getElementById('minutes').value = '';
+                        document.getElementById('hours').value = '';
+                        document.getElementById('dayOfMonth').value = '';
+                        document.getElementById('month').value = '';
+                        document.getElementById('dayOfWeek').value = '';
+                    }
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const inputs = document.querySelectorAll("input[type='number']");
+
+                        inputs.forEach(input => {
+                            input.addEventListener("input", function() {
+                                const min = parseInt(input.getAttribute("min"));
+                                const max = parseInt(input.getAttribute("max"));
+                                const value = parseInt(input.value);
+
+                                if (value < min || isNaN(value)) {
+                                    input.value = '';
+                                    $('#modal-notification').modal('show');
+                                } else if (value > max) {
+                                    input.value = '';
+                                    $('#modal-notification').modal('show');
+                                }
+                            });
+                        });
+                    });
+								</script>
+							</div>
+						</div>
+		</section>
+		<br><br>
+		Photo by <a href="https://unsplash.com/@sonjalangford?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sonja Langford</a> on <a href="https://unsplash.com/photos/round-timex-analog-clock-at-233-eIkbSc3SDtI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+	</body>
+</html>

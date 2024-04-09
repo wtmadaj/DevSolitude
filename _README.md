@@ -166,8 +166,13 @@ try
 then use the command again. This has occurred after computer restarts.
 
 
-## Argon Icons
+## Icons
+### Argon Icons
 https://demos.creative-tim.com/argon-design-system/docs/foundation/icons.html
+
+### Font Awesome 4 Icons
+https://fontawesome.com/v4/icons/
+
 
 ## Branching Strategy
 feature > develop > main
