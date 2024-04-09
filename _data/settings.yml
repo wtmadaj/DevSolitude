@@ -59,6 +59,9 @@ menu_settings:
         - title: 'Timezones'
           url: /timezones
           icon: ni-world-2 text-success
+        - title: 'Cron Expressions'
+          url: /cron
+          icon: ni-time-alarm text-warning
     - title: 'Blog'
       url: /blog
     - title: 'About'

@@ -8,105 +8,88 @@
 		<section class="mt-4" id="contact">
 			<div class="contactus-1 fullWidth">
 				<div class="container">
-					<div class="col-8 col-md-12 ml-auto mr-auto">
-						<div class="card card-contact card-raised">
-							<div class="card-body">
 
-		<label for="seconds">Seconds:</label>
-		<input type="number" id="seconds" min="0" max="59" step="1">
-		<label for="minutes">Minutes:</label>
-		<input type="number" id="minutes" min="0" max="59" step="1">
-		<label for="hours">Hours:</label>
-		<input type="number" id="hours" min="0" max="23" step="1">
-		<label for="dayOfMonth">Day of the Month:</label>
-		<input type="number" id="dayOfMonth" min="1" max="31" step="1">
-		<label for="month">Month:</label>
-		<input type="number" id="month" min="1" max="12" step="1">
-		<label for="dayOfWeek">Day of the Week:</label>
-		<input type="number" id="dayOfWeek" min="0" max="7" step="1">
-		<br><br>
-		<button type="button" class="btn btn-icon btn-3 btn-primary" onclick="generateCronExpression()">
-			<span class="btn-inner--icon"><i class="ni ni-time-alarm"></i></span>
-			<span class="btn-inner--text">Convert</span></button>
-		<div id="inputValues">
-			<h3>Input Values:</h3>
-		</div>
-		<div id="cronExpression">
-			<h3>Cron Expression:</h3>
-		</div>
+					<div class="card card-nav-tabs">
+						<div class="card-body">
+							<h4 class="card-title">Enter the values for your cron expression</h4>
+							<br>
 
-		<script>
-        function generateCronExpression() {
-            const seconds = document.getElementById('seconds').value.trim();
-            const minutes = document.getElementById('minutes').value.trim();
-            const hours = document.getElementById('hours').value.trim();
-            const dayOfMonth = document.getElementById('dayOfMonth').value.trim();
-            const month = document.getElementById('month').value.trim();
-            const dayOfWeek = document.getElementById('dayOfWeek').value.trim();
+							<label for="seconds">Seconds:</label>
+							<input type="number" id="seconds" min="0" max="59" step="1">
+							<label for="minutes">Minutes:</label>
+							<input type="number" id="minutes" min="0" max="59" step="1">
+							<label for="hours">Hours:</label>
+							<input type="number" id="hours" min="0" max="23" step="1">
+							<label for="dayOfMonth">Day of the Month:</label>
+							<input type="number" id="dayOfMonth" min="1" max="31" step="1">
+							<label for="month">Month:</label>
+							<input type="number" id="month" min="1" max="12" step="1">
+							<label for="dayOfWeek">Day of the Week:</label>
+							<input type="number" id="dayOfWeek" min="0" max="7" step="1">
 
-            let cronExpression = '';
+							<br><br>
+							<button type="button" class="btn btn-icon btn-3 btn-primary" onclick="generateCronExpression()">
+								<span class="btn-inner--icon"><i class="ni ni-time-alarm"></i></span>
+								<span class="btn-inner--text">Convert</span></button>
+						</div>
 
-            if (seconds !== '') {
-                cronExpression += seconds + ' ';
-            } else {
-                cronExpression += '* ';
-            }
+						<div class="card-footer text-muted">
+							<div id="inputValues">
+								<h4 class="card-title">Input Values:</h4>
+							</div>
+							<br>
+							<div id="cronExpression">
+								<h4 class="card-title">Cron Expression:</h4>
+							</div>
+						</div>
+					</div>
 
-            if (minutes !== '') {
-                cronExpression += minutes + ' ';
-            } else {
-                cronExpression += '* ';
-            }
+								<script>
+                    function generateCronExpression() {
+                        const seconds = document.getElementById('seconds').value.trim();
+                        const minutes = document.getElementById('minutes').value.trim();
+                        const hours = document.getElementById('hours').value.trim();
+                        const dayOfMonth = document.getElementById('dayOfMonth').value.trim();
+                        const month = document.getElementById('month').value.trim();
+                        const dayOfWeek = document.getElementById('dayOfWeek').value.trim();
 
-            if (hours !== '') {
-                cronExpression += hours + ' ';
-            } else {
-                cronExpression += '* ';
-            }
+                        let cronExpression = '';
 
-            if (dayOfMonth !== '') {
-                cronExpression += dayOfMonth + ' ';
-            } else {
-                cronExpression += '* ';
-            }
+                        cronExpression += seconds !== '' ? seconds + ' ' : '* ';
+                        cronExpression += minutes !== '' ? minutes + ' ' : '* ';
+                        cronExpression += hours !== '' ? hours + ' ' : '* ';
+												cronExpression += dayOfMonth !== '' ? dayOfMonth + ' ' : '* ';
+												cronExpression += month !== '' ? month + ' ' : '* ';
+												cronExpression += dayOfWeek !== '' ? dayOfWeek + ' ' : '* ';
 
-            if (month !== '') {
-                cronExpression += month + ' ';
-            } else {
-                cronExpression += '* ';
-            }
+                        // Display user's input
+                        var inputDiv = document.getElementById('inputValues');
+                        inputDiv.innerHTML = "";
+                        var inputValues = "<h3>Input Values:</h3>"
+                        inputValues += `Seconds = ${seconds || '*'}, Minutes = ${minutes || '*'}, Hours = ${hours || '*'}, Day of the Month = ${dayOfMonth || '*'}, Month = ${month || '*'}, Day of the Week = ${dayOfWeek || '*'}`;
+                        inputDiv.innerHTML = inputValues;
 
-            if (dayOfWeek !== '') {
-                cronExpression += dayOfWeek + ' ';
-            } else {
-                cronExpression += '* ';
-            }
+                        // Display cron expression
+                        var cronDiv = document.getElementById('cronExpression');
+                        cronDiv.innerHTML = "";
+                        var cronExpressionValues = "<h3>Cron Expression:</h3>"
+                        cronExpressionValues += cronExpression;
+                        document.getElementById('cronExpression').textContent = cronExpression;
+                        cronDiv.innerHTML = cronExpressionValues;
 
-            // Display user's input
-            var inputDiv = document.getElementById('inputValues');
-            inputDiv.innerHTML = "";
-            var inputValues = "<h3>Input Values:</h3>"
-            inputValues += `Seconds = ${seconds || '*'}, Minutes = ${minutes || '*'}, Hours = ${hours || '*'}, Day of the Month = ${dayOfMonth || '*'}, Month = ${month || '*'}, Day of the Week = ${dayOfWeek || '*'}`;
-            inputDiv.innerHTML = inputValues;
-
-            // Display cron expression
-						var cronDiv = document.getElementById('cronExpression');
-						cronDiv.innerHTML = "";
-						var cronExpressionValues = "<h3>Cron Expression:</h3>"
-						cronExpressionValues += cronExpression;
-            document.getElementById('cronExpression').textContent = cronExpression;
-            cronDiv.innerHTML = cronExpressionValues;
-
-            // Clear input fields
-            document.getElementById('seconds').value = '';
-            document.getElementById('minutes').value = '';
-            document.getElementById('hours').value = '';
-            document.getElementById('dayOfMonth').value = '';
-            document.getElementById('month').value = '';
-            document.getElementById('dayOfWeek').value = '';
-        }
-		</script>
-							</div></div></div></div></div>
+                        // Clear input fields
+                        document.getElementById('seconds').value = '';
+                        document.getElementById('minutes').value = '';
+                        document.getElementById('hours').value = '';
+                        document.getElementById('dayOfMonth').value = '';
+                        document.getElementById('month').value = '';
+                        document.getElementById('dayOfWeek').value = '';
+                    }
+								</script>
+							</div>
+						</div>
 		</section>
+		<br><br>
+		Photo by <a href="https://unsplash.com/@sonjalangford?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sonja Langford</a> on <a href="https://unsplash.com/photos/round-timex-analog-clock-at-233-eIkbSc3SDtI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 	</body>
 </html>
